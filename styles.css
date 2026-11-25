@@ -235,6 +235,7 @@ h3 {
   border: 1px solid transparent;
   border-radius: 999px;
   color: var(--text);
+  font-family: inherit;
   font-size: 13px;
   font-weight: 700;
   text-decoration: none;
@@ -244,7 +245,7 @@ h3 {
     transform 160ms ease;
 }
 
-.button:hover {
+.button:hover:not(:disabled) {
   transform: translateY(-1px);
 }
 
@@ -263,9 +264,13 @@ h3 {
   backdrop-filter: blur(12px);
 }
 
-.button-secondary:hover {
+.button-secondary:hover:not(:disabled) {
   border-color: rgba(102, 227, 196, 0.45);
   background: rgba(102, 227, 196, 0.08);
+}
+
+.button:disabled {
+  opacity: 0.55;
 }
 
 .paper-meta {
@@ -314,6 +319,28 @@ h3 {
 
 .section + .section {
   border-top: 1px solid var(--line);
+}
+
+.demo-section {
+  text-align: center;
+}
+
+.demo-video {
+  display: block;
+  width: min(100%, 1080px);
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-large);
+  background: var(--bg);
+}
+
+.demo-link {
+  display: inline-block;
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 13px;
+  text-underline-offset: 3px;
 }
 
 .section-heading {
@@ -736,6 +763,7 @@ footer span:first-child {
   }
 
   .paper-figure,
+  .demo-video,
   .problem-card,
   .question-card {
     border-radius: 16px;
