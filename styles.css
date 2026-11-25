@@ -369,6 +369,13 @@ h3 {
   letter-spacing: 0.16em;
 }
 
+.tenon-logo {
+  display: block;
+  width: clamp(132px, 16vw, 174px);
+  height: auto;
+  border-radius: 14px;
+}
+
 .tenon-stages {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
