@@ -3,8 +3,6 @@ const data = window.WORLD_EXPAND_DATA;
 const matrixGrid = document.querySelector("#matrix-grid");
 const comparisonGrid = document.querySelector("#comparison-grid");
 const galleryGrid = document.querySelector("#gallery-grid");
-const searchInput = document.querySelector("#search-input");
-const emptyState = document.querySelector("#empty-state");
 const matrixComparisons = data.matrixComparisons ?? [];
 
 function videoMarkup(src, label, detail) {
@@ -28,14 +26,10 @@ for (const item of matrixComparisons) {
   const card = document.createElement("article");
   card.className = "comparison-card";
   card.innerHTML = `
-    <div class="card-header">
-      <h3 title="${item.id}">${item.id}</h3>
-      <span class="tag">MATRIX3D COMPARISON</span>
-    </div>
     <div class="video-grid video-quad">
       <div class="video-panel input-panel">
         <div class="video-label"><strong>Input</strong><span>Panorama</span></div>
-        <img loading="lazy" src="${item.image}" alt="${item.id} input panorama" />
+        <img loading="lazy" src="${item.image}" alt="Input panorama" />
       </div>
       ${videoMarkup(item.matrixVideo, "Matrix3D", "Four-View GS")}
       ${beforePanel}
@@ -49,12 +43,8 @@ for (const item of data.comparisons) {
   const card = document.createElement("article");
   card.className = "comparison-card";
   card.innerHTML = `
-    <div class="card-header">
-      <h3 title="${item.id}">${item.id}</h3>
-      <span class="tag">PAIRED COMPARISON</span>
-    </div>
     <div class="input-strip">
-      <img loading="lazy" src="${item.image}" alt="${item.id} input panorama" />
+      <img loading="lazy" src="${item.image}" alt="Input panorama" />
     </div>
     <div class="video-grid video-pair">
       ${videoMarkup(item.beforeVideo, "Before Expansion", "Single-View GS")}
@@ -67,30 +57,14 @@ for (const item of data.comparisons) {
 for (const item of data.examples) {
   const card = document.createElement("article");
   card.className = "gallery-card";
-  card.dataset.search = item.id.toLowerCase();
   card.innerHTML = `
-    <div class="card-header">
-      <h3 title="${item.id}">${item.id}</h3>
-      <span class="tag">EXPANDED WORLD</span>
-    </div>
     <div class="media">
-      <img loading="lazy" src="${item.image}" alt="${item.id} input panorama" />
+      <img loading="lazy" src="${item.image}" alt="Input panorama" />
       <video controls muted loop autoplay playsinline preload="metadata" src="${item.video}"></video>
     </div>
   `;
   galleryGrid.appendChild(card);
 }
-
-searchInput.addEventListener("input", () => {
-  const query = searchInput.value.trim().toLowerCase();
-  let visible = 0;
-  for (const card of galleryGrid.children) {
-    const matches = !query || card.dataset.search.includes(query);
-    card.hidden = !matches;
-    if (matches) visible += 1;
-  }
-  emptyState.hidden = visible > 0;
-});
 
 const autoplayObserver = new IntersectionObserver(
   (entries) => {

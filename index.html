@@ -8,7 +8,7 @@
       content="WorldExpand: Building Coherent 3D Worlds via Sparse Joint Panoramic Expansion"
     />
     <title>WorldExpand: Building Coherent 3D Worlds via Sparse Joint Panoramic Expansion</title>
-    <link rel="stylesheet" href="./styles.css?v=20261125-method" />
+    <link rel="stylesheet" href="./styles.css?v=20261126-scene" />
   </head>
   <body>
     <header class="hero">
@@ -91,12 +91,12 @@
       <section id="motivation" class="section story-section">
         <div class="section-heading section-heading-wide">
           <div>
-            <p class="eyebrow">THE PROBLEM</p>
-            <h2>Why not panoramic video?</h2>
+            <p class="eyebrow">MOTIVATION</p>
+            <h2>How to expand a scene?</h2>
           </div>
-          <p>Dense sequences are built for playback—not 3D reconstruction.</p>
         </div>
 
+        <h3 class="motivation-question">Why not panoramic video?</h3>
         <figure class="paper-figure paper-figure-wide">
           <img
             src="./assets/paper-teaser.png"
@@ -107,18 +107,15 @@
 
         <div class="problem-grid" aria-label="Limitations of panoramic video generation">
           <article class="problem-card">
-            <span class="card-index">01</span>
-            <h3>Redundant</h3>
+            <h4>Redundant</h4>
             <p>Adjacent frames repeat the same geometry.</p>
           </article>
           <article class="problem-card">
-            <span class="card-index">02</span>
-            <h3>Limited</h3>
+            <h4>Limited</h4>
             <p>One rollout explores one direction.</p>
           </article>
           <article class="problem-card">
-            <span class="card-index">03</span>
-            <h3>Inconsistent</h3>
+            <h4>Inconsistent</h4>
             <p>Independent runs conflict and drift.</p>
           </article>
         </div>
@@ -216,18 +213,13 @@
       </section>
 
       <section class="section gallery-section">
-        <div class="section-heading gallery-heading">
+        <div class="section-heading">
           <div>
             <p class="eyebrow">MORE RESULTS</p>
             <h2>More expanded worlds</h2>
           </div>
-          <label class="search">
-            <span>Search</span>
-            <input id="search-input" type="search" placeholder="Enter a scene ID" />
-          </label>
         </div>
         <div id="gallery-grid" class="gallery-grid"></div>
-        <p id="empty-state" class="empty-state" hidden>No matching scenes</p>
       </section>
     </main>
 
@@ -237,6 +229,6 @@
     </footer>
 
     <script src="./data.js?v=20261014-layout"></script>
-    <script src="./app.js?v=20261014-playlist1"></script>
+    <script src="./app.js?v=20261126-scene"></script>
   </body>
 </html>
