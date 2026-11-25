@@ -360,8 +360,13 @@ h3 {
   background: linear-gradient(135deg, rgba(102, 227, 196, 0.08), transparent 65%), var(--panel-soft);
 }
 
-.tenon-panel h2 {
-  max-width: 920px;
+.tenon-panel .section-heading {
+  gap: 16px;
+}
+
+.tenon-panel .eyebrow {
+  font-size: clamp(16px, 2vw, 21px);
+  letter-spacing: 0.16em;
 }
 
 .tenon-stages {
