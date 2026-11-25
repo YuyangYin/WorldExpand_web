@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="WorldExpand: Building Coherent 3D Worlds via Sparse Joint Panoramic Expansion"
+    />
+    <title>WorldExpand: Building Coherent 3D Worlds via Sparse Joint Panoramic Expansion</title>
+    <link rel="stylesheet" href="./styles.css?v=20261125-method" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a class="wordmark" href="#top" aria-label="WorldExpand home">
+          <span class="wordmark-mark" aria-hidden="true"></span>
+          WorldExpand
+        </a>
+        <div class="nav-links">
+          <a href="#motivation">Motivation</a>
+          <a href="#method">Method</a>
+          <a href="#efficiency">Efficiency</a>
+          <a href="#results">Results</a>
+        </div>
+      </nav>
+      <video
+        class="hero-video"
+        autoplay
+        muted
+        playsinline
+        preload="auto"
+        poster="./assets/matrix/panofold__e717e4ad0adc5767cf82fe43bace9fc3/input.png"
+        aria-hidden="true"
+        tabindex="-1"
+        data-next-src="./assets/examples/panofold__6b084c3a0e30a4cb7b86c0593a4d5091/expanded.mp4"
+        src="./assets/matrix/panofold__e717e4ad0adc5767cf82fe43bace9fc3/after_expanded.mp4"
+      ></video>
+      <div class="hero-glow"></div>
+      <div id="top" class="hero-content">
+        <p class="eyebrow">ONE PANORAMA → ONE EXPANDED WORLD</p>
+        <h1>
+          <span class="title-line"><span class="title-accent">WorldExpand</span>:</span>
+          <span class="title-line">Building Coherent 3D Worlds</span>
+          <span class="title-subline">Via Sparse Joint Panoramic Expansion</span>
+        </h1>
+        <p class="hero-summary">
+          Four selected 2K panoramas. Jointly generated. Ready for 3D reconstruction.
+        </p>
+        <div class="hero-actions" aria-label="Page shortcuts">
+          <a class="button button-primary" href="#method">Method</a>
+          <a class="button button-secondary" href="#results">Results</a>
+        </div>
+        <div class="paper-meta" aria-label="Authors and affiliations">
+          <p class="authors">
+            <span>
+              <a href="https://yuyangyin.github.io/" target="_blank" rel="noopener noreferrer">Yuyang Yin</a><sup>1,2</sup>
+            </span>
+            <span>
+              <a href="https://ewrfcas.github.io/" target="_blank" rel="noopener noreferrer">Chenjie Cao</a><sup>2</sup>
+            </span>
+            <span>Xuhui Zuo<sup>2</sup></span>
+            <span>Yuning Gong<sup>2</sup></span>
+            <span>
+              <a href="https://scholar.google.com/citations?user=zAAYwRYAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Pengfei Wang</a><sup>2</sup>
+            </span>
+            <span>Junta Wu<sup>2</sup></span>
+            <span>
+              <a href="https://zhenwwang.github.io/" target="_blank" rel="noopener noreferrer">Zhenwei Wang</a><sup>2</sup>
+            </span>
+            <span>
+              <a href="https://scholar.google.com/citations?user=lO5VIncAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener noreferrer">Yao Zhao</a><sup>1</sup>
+            </span>
+            <span>
+              <a href="https://tengfei-wang.github.io/" target="_blank" rel="noopener noreferrer">Tengfei Wang</a><sup>2∗</sup>
+            </span>
+            <span>
+              <a href="https://scholar.google.com/citations?user=qL9Csv0AAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener noreferrer">Yunchao Wei</a><sup>1∗</sup>
+            </span>
+            <span>Chunchao Guo<sup>2∗</sup></span>
+          </p>
+          <p class="affiliations">
+            <span><sup>1</sup>Beijing Jiaotong University</span>
+            <span><sup>2</sup>Tencent Hunyuan</span>
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="motivation" class="section story-section">
+        <div class="section-heading section-heading-wide">
+          <div>
+            <p class="eyebrow">THE PROBLEM</p>
+            <h2>Why not panoramic video?</h2>
+          </div>
+          <p>Dense sequences are built for playback—not 3D reconstruction.</p>
+        </div>
+
+        <figure class="paper-figure paper-figure-wide">
+          <img
+            src="./assets/paper-teaser.png"
+            alt="Dense independent video trajectories compared with WorldExpand's sparse joint panorama generation"
+          />
+          <figcaption>Dense independent trajectories → sparse joint panoramas.</figcaption>
+        </figure>
+
+        <div class="problem-grid" aria-label="Limitations of panoramic video generation">
+          <article class="problem-card">
+            <span class="card-index">01</span>
+            <h3>Redundant</h3>
+            <p>Adjacent frames repeat the same geometry.</p>
+          </article>
+          <article class="problem-card">
+            <span class="card-index">02</span>
+            <h3>Limited</h3>
+            <p>One rollout explores one direction.</p>
+          </article>
+          <article class="problem-card">
+            <span class="card-index">03</span>
+            <h3>Inconsistent</h3>
+            <p>Independent runs conflict and drift.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="method" class="section method-section">
+        <div class="section-heading section-heading-wide">
+          <div>
+            <p class="eyebrow">THE METHOD</p>
+            <h2>Three questions.</h2>
+          </div>
+        </div>
+
+        <div class="question-grid">
+          <article class="question-card question-card-representation">
+            <h3>What</h3>
+            <p>Generate a sparse set of panoramas jointly.</p>
+          </article>
+
+          <article class="question-card question-card-where">
+            <h3>Where</h3>
+            <p>Select viewpoints that maximize unseen coverage in each quadrant.</p>
+          </article>
+
+          <article class="question-card question-card-how">
+            <h3>How</h3>
+            <p>Warp the source geometry and jointly denoise the selected views.</p>
+          </article>
+        </div>
+
+        <figure class="paper-figure">
+          <img
+            src="./assets/paper-method.png"
+            alt="WorldExpand pipeline with coverage-guided view selection, joint panoramic diffusion, and reconstruction"
+          />
+          <figcaption>Coverage-guided selection → joint diffusion → 3D reconstruction.</figcaption>
+        </figure>
+      </section>
+
+      <section id="efficiency" class="section attention-section">
+        <div class="attention-intro">
+          <div>
+            <p class="eyebrow">GLOBAL–LOCAL ATTENTION</p>
+            <h2>Global only where needed.</h2>
+          </div>
+          <div class="attention-copy">
+            <p>
+              Localize the 30 least-sensitive of 60 DiT layers. Keep the rest global.
+            </p>
+          </div>
+        </div>
+
+        <div class="attention-metrics" aria-label="Global-local attention improvements">
+          <article>
+            <span>Training</span>
+            <strong>1.77×</strong>
+            <p>299 s → 169 s / step</p>
+          </article>
+          <article>
+            <span>Inference</span>
+            <strong>1.79×</strong>
+            <p>66.76 s → 37.34 s / profile</p>
+          </article>
+          <article>
+            <span>Training memory</span>
+            <strong>−7.8 GB</strong>
+            <p>90.5 GB → 82.7 GB</p>
+          </article>
+          <article>
+            <span>Quality gap</span>
+            <strong>0.33 dB</strong>
+            <p>20.49 → 20.16 PSNR</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="results" class="section comparison-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">QUALITATIVE</p>
+            <h2>System comparison.</h2>
+          </div>
+        </div>
+        <div id="matrix-grid" class="comparison-grid"></div>
+      </section>
+
+      <section class="section comparison-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">BEFORE / AFTER</p>
+            <h2>What expansion adds.</h2>
+          </div>
+        </div>
+        <div id="comparison-grid" class="comparison-grid"></div>
+      </section>
+
+      <section class="section gallery-section">
+        <div class="section-heading gallery-heading">
+          <div>
+            <p class="eyebrow">MORE RESULTS</p>
+            <h2>More expanded worlds</h2>
+          </div>
+          <label class="search">
+            <span>Search</span>
+            <input id="search-input" type="search" placeholder="Enter a scene ID" />
+          </label>
+        </div>
+        <div id="gallery-grid" class="gallery-grid"></div>
+        <p id="empty-state" class="empty-state" hidden>No matching scenes</p>
+      </section>
+    </main>
+
+    <footer>
+      <span>WorldExpand</span>
+      <span>Sparse observations · Joint generation · Coherent 3D worlds</span>
+    </footer>
+
+    <script src="./data.js?v=20261014-layout"></script>
+    <script src="./app.js?v=20261014-playlist1"></script>
+  </body>
+</html>
