@@ -2,94 +2,81 @@ window.WORLD_EXPAND_DATA = {
   "generatedAt": "2026-09-23T17:04:45",
   "matrixComparisons": [
     {
-      "id": "03b1fe1db2f1480ca9325e28b07d8192",
-      "image": "./assets/matrix/03b1fe1db2f1480ca9325e28b07d8192/input.png",
-      "matrixVideo": "./assets/matrix/03b1fe1db2f1480ca9325e28b07d8192/matrix3d.mp4",
-      "afterVideo": "./assets/matrix/03b1fe1db2f1480ca9325e28b07d8192/after_expanded.mp4",
-      "beforeVideo": "./assets/matrix/03b1fe1db2f1480ca9325e28b07d8192/before_single.mp4"
+      "image": "./assets/matrix/01.png",
+      "matrixVideo": "./assets/matrix/01-matrix3d.mp4",
+      "afterVideo": "./assets/matrix/01-after.mp4",
+      "beforeVideo": "./assets/matrix/01-before.mp4"
     },
     {
-      "id": "58926b95fe2971e47a92e93090e5eeab",
-      "image": "./assets/matrix/58926b95fe2971e47a92e93090e5eeab/input.png",
-      "matrixVideo": "./assets/matrix/58926b95fe2971e47a92e93090e5eeab/matrix3d.mp4",
-      "afterVideo": "./assets/matrix/58926b95fe2971e47a92e93090e5eeab/after_expanded.mp4",
-      "beforeVideo": "./assets/matrix/58926b95fe2971e47a92e93090e5eeab/before_single.mp4"
+      "image": "./assets/matrix/02.png",
+      "matrixVideo": "./assets/matrix/02-matrix3d.mp4",
+      "afterVideo": "./assets/matrix/02-after.mp4",
+      "beforeVideo": "./assets/matrix/02-before.mp4"
     },
     {
-      "id": "SF_Brutalist_city_zw_04__183__164__0710",
-      "image": "./assets/matrix/SF_Brutalist_city_zw_04__183__164__0710/input.png",
-      "matrixVideo": "./assets/matrix/SF_Brutalist_city_zw_04__183__164__0710/matrix3d.mp4",
-      "afterVideo": "./assets/matrix/SF_Brutalist_city_zw_04__183__164__0710/after_expanded.mp4",
-      "beforeVideo": "./assets/matrix/SF_Brutalist_city_zw_04__183__164__0710/before_single.mp4"
+      "image": "./assets/matrix/03.png",
+      "matrixVideo": "./assets/matrix/03-matrix3d.mp4",
+      "afterVideo": "./assets/matrix/03-after.mp4",
+      "beforeVideo": "./assets/matrix/03-before.mp4"
     },
     {
-      "id": "aec82bab",
-      "image": "./assets/matrix/aec82bab/input.png",
-      "matrixVideo": "./assets/matrix/aec82bab/matrix3d.mp4",
-      "afterVideo": "./assets/matrix/aec82bab/after_expanded.mp4",
-      "beforeVideo": "./assets/matrix/aec82bab/before_single.mp4"
+      "image": "./assets/matrix/04.png",
+      "matrixVideo": "./assets/matrix/04-matrix3d.mp4",
+      "afterVideo": "./assets/matrix/04-after.mp4",
+      "beforeVideo": "./assets/matrix/04-before.mp4"
     },
     {
-      "id": "f30c7f96-9686-4308-adf5-111cc68cef55",
-      "image": "./assets/matrix/f30c7f96-9686-4308-adf5-111cc68cef55/input.png",
-      "matrixVideo": "./assets/matrix/f30c7f96-9686-4308-adf5-111cc68cef55/matrix3d.mp4",
-      "afterVideo": "./assets/matrix/f30c7f96-9686-4308-adf5-111cc68cef55/after_expanded.mp4",
-      "beforeVideo": "./assets/matrix/f30c7f96-9686-4308-adf5-111cc68cef55/before_single.mp4"
+      "image": "./assets/matrix/05.png",
+      "matrixVideo": "./assets/matrix/05-matrix3d.mp4",
+      "afterVideo": "./assets/matrix/05-after.mp4",
+      "beforeVideo": "./assets/matrix/05-before.mp4"
     },
     {
-      "id": "merged_dataset_1000__2a99a2ba07eb4b2443a78664d5dfeaad",
-      "image": "./assets/matrix/merged_dataset_1000__2a99a2ba07eb4b2443a78664d5dfeaad/input.png",
-      "matrixVideo": "./assets/matrix/merged_dataset_1000__2a99a2ba07eb4b2443a78664d5dfeaad/matrix3d.mp4",
-      "afterVideo": "./assets/matrix/merged_dataset_1000__2a99a2ba07eb4b2443a78664d5dfeaad/after_expanded.mp4",
-      "beforeVideo": "./assets/matrix/merged_dataset_1000__2a99a2ba07eb4b2443a78664d5dfeaad/before_single.mp4"
+      "image": "./assets/matrix/06.png",
+      "matrixVideo": "./assets/matrix/06-matrix3d.mp4",
+      "afterVideo": "./assets/matrix/06-after.mp4",
+      "beforeVideo": "./assets/matrix/06-before.mp4"
     },
     {
-      "id": "merged_dataset_1000__6611c40d38417f5ed91ebe598794ca26",
-      "image": "./assets/matrix/merged_dataset_1000__6611c40d38417f5ed91ebe598794ca26/input.png",
-      "matrixVideo": "./assets/matrix/merged_dataset_1000__6611c40d38417f5ed91ebe598794ca26/matrix3d.mp4",
-      "afterVideo": "./assets/matrix/merged_dataset_1000__6611c40d38417f5ed91ebe598794ca26/after_expanded.mp4",
-      "beforeVideo": "./assets/matrix/merged_dataset_1000__6611c40d38417f5ed91ebe598794ca26/before_single.mp4"
+      "image": "./assets/matrix/07.png",
+      "matrixVideo": "./assets/matrix/07-matrix3d.mp4",
+      "afterVideo": "./assets/matrix/07-after.mp4",
+      "beforeVideo": "./assets/matrix/07-before.mp4"
     },
     {
-      "id": "merged_dataset_1000__9abe524ded23560477d9688378b489ae",
-      "image": "./assets/matrix/merged_dataset_1000__9abe524ded23560477d9688378b489ae/input.png",
-      "matrixVideo": "./assets/matrix/merged_dataset_1000__9abe524ded23560477d9688378b489ae/matrix3d.mp4",
-      "afterVideo": "./assets/matrix/merged_dataset_1000__9abe524ded23560477d9688378b489ae/after_expanded.mp4",
-      "beforeVideo": "./assets/matrix/merged_dataset_1000__9abe524ded23560477d9688378b489ae/before_single.mp4"
+      "image": "./assets/matrix/08.png",
+      "matrixVideo": "./assets/matrix/08-matrix3d.mp4",
+      "afterVideo": "./assets/matrix/08-after.mp4",
+      "beforeVideo": "./assets/matrix/08-before.mp4"
     },
     {
-      "id": "merged_dataset_1000__9ac1a3d98829cfb7d352ece48ede500e",
-      "image": "./assets/matrix/merged_dataset_1000__9ac1a3d98829cfb7d352ece48ede500e/input.png",
-      "matrixVideo": "./assets/matrix/merged_dataset_1000__9ac1a3d98829cfb7d352ece48ede500e/matrix3d.mp4",
-      "afterVideo": "./assets/matrix/merged_dataset_1000__9ac1a3d98829cfb7d352ece48ede500e/after_expanded.mp4",
-      "beforeVideo": "./assets/matrix/merged_dataset_1000__9ac1a3d98829cfb7d352ece48ede500e/before_single.mp4"
+      "image": "./assets/matrix/09.png",
+      "matrixVideo": "./assets/matrix/09-matrix3d.mp4",
+      "afterVideo": "./assets/matrix/09-after.mp4",
+      "beforeVideo": "./assets/matrix/09-before.mp4"
     },
     {
-      "id": "merged_dataset_1000__Haunted_Mansion_Hallway__style_09__v13_1",
-      "image": "./assets/matrix/merged_dataset_1000__Haunted_Mansion_Hallway__style_09__v13_1/input.png",
-      "matrixVideo": "./assets/matrix/merged_dataset_1000__Haunted_Mansion_Hallway__style_09__v13_1/matrix3d.mp4",
-      "afterVideo": "./assets/matrix/merged_dataset_1000__Haunted_Mansion_Hallway__style_09__v13_1/after_expanded.mp4"
+      "image": "./assets/matrix/10.png",
+      "matrixVideo": "./assets/matrix/10-matrix3d.mp4",
+      "afterVideo": "./assets/matrix/10-after.mp4"
     },
     {
-      "id": "panofold__e717e4ad0adc5767cf82fe43bace9fc3",
-      "image": "./assets/matrix/panofold__e717e4ad0adc5767cf82fe43bace9fc3/input.png",
-      "matrixVideo": "./assets/matrix/panofold__e717e4ad0adc5767cf82fe43bace9fc3/matrix3d.mp4",
-      "afterVideo": "./assets/matrix/panofold__e717e4ad0adc5767cf82fe43bace9fc3/after_expanded.mp4",
-      "beforeVideo": "./assets/matrix/panofold__e717e4ad0adc5767cf82fe43bace9fc3/before_single.mp4"
+      "image": "./assets/matrix/11.png",
+      "matrixVideo": "./assets/matrix/11-matrix3d.mp4",
+      "afterVideo": "./assets/matrix/11-after.mp4",
+      "beforeVideo": "./assets/matrix/11-before.mp4"
     }
   ],
   "comparisons": [
     {
-      "id": "0fde14f8",
-      "image": "./assets/comparisons/0fde14f8/input.png",
-      "beforeVideo": "./assets/comparisons/0fde14f8/before_single.mp4",
-      "afterVideo": "./assets/comparisons/0fde14f8/after_expanded.mp4"
+      "image": "./assets/comparisons/12.png",
+      "beforeVideo": "./assets/comparisons/12-before.mp4",
+      "afterVideo": "./assets/comparisons/12-after.mp4"
     },
     {
-      "id": "dShowroomKitVol_yzy_12__21__13__0049",
-      "image": "./assets/comparisons/dShowroomKitVol_yzy_12__21__13__0049/input.png",
-      "beforeVideo": "./assets/comparisons/dShowroomKitVol_yzy_12__21__13__0049/before_single.mp4",
-      "afterVideo": "./assets/comparisons/dShowroomKitVol_yzy_12__21__13__0049/after_expanded.mp4"
+      "image": "./assets/comparisons/13.png",
+      "beforeVideo": "./assets/comparisons/13-before.mp4",
+      "afterVideo": "./assets/comparisons/13-after.mp4"
     }
   ],
   "examples": [
