@@ -8,22 +8,27 @@
       content="WorldExpand: Building Coherent 3D Worlds via Sparse Joint Panoramic Expansion"
     />
     <title>WorldExpand: Building Coherent 3D Worlds via Sparse Joint Panoramic Expansion</title>
-    <link rel="stylesheet" href="./styles.css?v=20261126-video" />
+    <link rel="stylesheet" href="./styles.css?v=20261126-tenon" />
   </head>
-  <body>
-    <header class="hero">
-      <nav class="site-nav" aria-label="Primary navigation">
+  <body id="top">
+    <nav class="site-nav" aria-label="Primary navigation">
+      <div class="nav-inner">
         <a class="wordmark" href="#top" aria-label="WorldExpand home">
           <span class="wordmark-mark" aria-hidden="true"></span>
           WorldExpand
         </a>
         <div class="nav-links">
+          <a href="#video">Video</a>
+          <a href="#tenon">Tenon</a>
           <a href="#motivation">Motivation</a>
           <a href="#method">Method</a>
           <a href="#efficiency">Efficiency</a>
           <a href="#results">Results</a>
         </div>
-      </nav>
+      </div>
+    </nav>
+
+    <header class="hero">
       <video
         class="hero-video"
         autoplay
@@ -37,7 +42,7 @@
         src="./assets/matrix/11-after.mp4"
       ></video>
       <div class="hero-glow"></div>
-      <div id="top" class="hero-content">
+      <div class="hero-content">
         <p class="eyebrow">ONE PANORAMA → ONE EXPANDED WORLD</p>
         <h1>
           <span class="title-line"><span class="title-accent">WorldExpand</span>:</span>
@@ -88,7 +93,7 @@
     </header>
 
     <main>
-      <section class="section demo-section" aria-label="Project video">
+      <section id="video" class="section demo-section" aria-label="Project video">
         <iframe
           class="demo-video"
           src="https://www.youtube-nocookie.com/embed/v7Q_E-9xi84"
@@ -99,6 +104,31 @@
           allowfullscreen
         ></iframe>
         <a class="demo-link" href="https://youtu.be/v7Q_E-9xi84" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+      </section>
+
+      <section id="tenon" class="section" aria-labelledby="tenon-title">
+        <div class="tenon-panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">UPCOMING WORK</p>
+              <h2 id="tenon-title">Tenon: Planning, Generating, and Assembling Composable 3D Worlds</h2>
+            </div>
+          </div>
+          <div class="tenon-stages">
+            <article>
+              <h3>Plan in code</h3>
+              <p>Use an agent to turn a scene concept into a code-based 3D plan.</p>
+            </article>
+            <article>
+              <h3>Generate from blockouts</h3>
+              <p>Turn rough 3D blockouts into detailed scenes.</p>
+            </article>
+            <article>
+              <h3>Assemble scenes</h3>
+              <p>Combine generated scenes into a composable 3D world.</p>
+            </article>
+          </div>
+        </div>
       </section>
 
       <section id="motivation" class="section story-section">
